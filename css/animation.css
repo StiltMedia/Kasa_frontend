@@ -1,0 +1,139 @@
+/* --------------------------------
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+.animated-fill::before, .animated-fill::after {
+    /* the 2 underneath colored sections */
+    content: '';
+    position: fixed;
+    /* trick to remove some annoying flickering on webkit browsers */
+    width: 89.8%;
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 50%;
+    z-index: -1;
+}
+.animated-section {
+    position: relative;
+}
+.animated-inner {
+    margin: 0 auto;
+    width: 42%;
+    background-color: #f7f7f7;
+}
+.animated-fill::before {
+    top: 0;
+    background-color: #154067;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    transition: all 0.8s;
+}
+.animated-inner::after {
+    top: 50%;
+    background-color: #fff;
+}
+.cd-container {
+    padding: 0;
+    list-style-type: none;
+}
+.cd-service {
+    position: relative;
+    z-index: 2;
+    min-height: 50px;
+    padding: 1em 1em 4em;
+}
+.cd-service::before, .cd-service::after {
+    content: '';
+    position: absolute;
+    width: 56px;
+    right: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.cd-service::before {
+    top: 0;
+    height: 50px;
+    background-repeat: no-repeat;
+}
+.cd-service::after {
+    top: 50px;
+    bottom: 0;
+    background-image: url("../img/cd-pattern-small.svg");
+    background-repeat: repeat-y;
+}
+.cd-service.cd-service-divider::after {
+    top: 0;
+}
+.cd-service.cd-service-divider:last-child {
+    display: none;
+}
+.cd-service.cd-service-1::before {
+    background-image: url("../img/cd-icon-1-small.svg");
+}
+.cd-service.cd-service-2::before {
+    background-image: url("../img/cd-icon-2-small.svg");
+}
+.cd-service.cd-service-3::before {
+    background-image: url("../img/cd-icon-3-small.svg");
+}
+.cd-service.cd-service-4::before {
+    background-image: url("../img/cd-icon-4-small.svg");
+}
+.cd-service h2 {
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 1em;
+    font-family: "Merriweather Sans", sans-serif;
+}
+.cd-service p {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.5);
+}
+@media only screen and (min-width: 1170px) {
+    .cd-service {
+        min-height: 525px;
+        padding: 6em 2em;
+    }
+    .cd-service::before, .cd-service::after {
+        width: 100%;
+    }
+    .cd-service::before {
+        height: 325px;
+    }
+    .cd-service::after {
+        top: 325px;
+        background-image: url("../img/cd-pattern-large.svg");
+    }
+    .cd-service.cd-service-divider:first-child, .cd-service.cd-service-divider:last-child {
+        min-height: 50px;
+        padding: 0;
+    }
+    .cd-service.cd-service-divider:last-child {
+        display: block;
+    }
+    .cd-service.cd-service-1::before {
+        background-image: url("../img/fill_top.png");
+    }
+    .cd-service.cd-service-2::before {
+        background-image: url("../img/cd-icon-2-large.svg");
+    }
+    .cd-service.cd-service-3::before {
+        background-image: url("../img/cd-icon-3-large.svg");
+    }
+    .cd-service.cd-service-4::before {
+        background-image: url("../img/cd-icon-4-large.svg");
+    }
+}

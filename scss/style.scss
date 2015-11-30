@@ -1,0 +1,813 @@
+/*
+Theme Name: Rustovo
+Theme URI: http://demo.powerthemes.club/
+Description: Kasa
+Author: powerthemes
+Author URI: http://themeforest.net/user/pebas/
+License: GNU General Public License version 3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Version: 1.0
+Tags: white
+*/
+
+/* TABLE OF CONTENTS -----------------------------
+
+0.      Colors & Mixins
+            - backgrounds
+            - main colors
+            - body bg
+            - bnNav
+            - bgCopy
+            - font color
+            - borders
+            - social icon colors
+            - font families
+            - mixins
+-0-.    Overall & common styling
+
+
+----------------------------------------------- */
+
+/* -------------- BEGINING OF STYLING
+---------------------------------------------------------------- */
+
+/* =0. Colors & Mixins
+--------------------------------------------------------------- */
+// backgrounds -------------------
+$white: #fff;
+$dark: #333;
+$grey: #a1aeb7;
+// main colors
+$primaryColor: #333;
+// body bg
+$bodyColor: #fff;
+// font color
+$headerColor: #363636;
+$fontColor: #363636;
+// links color
+$linkColor: #760000;
+// button colors
+$btnColor: #fff;
+// borders --------------------------
+$borderColor: #f5f5f5;
+// social icon colors
+$facebook: #3b5998;
+$twitter: #00aced;
+$google: #dd4b39;
+$tumblr: #2c4762;
+$pinterest: #cb2027;
+$linkedin: #007bb5;
+// font families ------------------------
+$fontPrimary: 'Lato', Helvetica, Arial, sans-serif;
+$fontSecondary: 'Lato', Helvetica, Arial, sans-serif;
+// Mixins
+@mixin transition($properties: all, $duration: .3s, $easing: ease-in-out) {
+    @if length($properties) > 1 {
+        transition-property: $properties;
+        transition-duration: $duration;
+        transition-timing-function: $easing;
+    } @else {
+        transition: $properties $duration $easing;
+    }
+}
+/* -------------- -0-. Overall & common styling
+--------------------------------------------------------------- */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: $bodyColor;
+    font-size: 14px;
+    line-height: 1.8;
+    font-family: $fontPrimary;
+    color: $fontColor;
+    -webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $fontPrimary;
+    color: $headerColor;
+    font-weight: 900;
+}
+h1 {
+    font-size: 70px;
+    line-height: 1.1;
+}
+h2 {
+    font-size: 60px;
+    line-height: 1;
+    font-weight: 600;
+}
+h3 {
+    font-size: 24px;
+    line-height: 1.3;
+}
+h4 {
+    font-size: 22px;
+    line-height: 1.1;
+}
+h5 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+h6 {
+    font-size: 16px;
+    line-height: 1.5;
+}
+p {
+    font-family: $fontSecondary;
+    font-size: 21px;
+    color: $fontColor;
+    line-height: 1.5;
+}
+small {
+    font-size: 12px;
+    line-height: 1.2;
+}
+b,
+strong {
+    color: darken($fontColor, 10%);
+}
+a {
+    color: $linkColor;
+    transition: all 0.3s ease-in-out;
+}
+a:hover,
+a:focus {
+    transition: all 0.3s ease-in-out;
+    text-decoration: underline;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+section {
+    padding: 120px 0;
+}
+.no-padding {
+    padding: 0;
+}
+/* animation - - - - */
+/* Menu Fade In Animation */
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 10%, 0);
+        transform: translate3d(0, 10%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 10%, 0);
+        transform: translate3d(0, 10%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+// main button
+@mixin btn($bg) {
+    background-color: $bg;
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: none;
+        background-color: darken($bg, 6%);
+        color: $white;
+        outline: 0;
+    }
+}
+.btn {
+    padding: 24px 12px;
+    min-height: 38px;
+    background-color: transparent;
+    border: 1px solid $white;
+    border-radius: 3px;
+    box-shadow: none;
+    font-size: 30px;
+    font-weight: 700;
+    color: $white;
+    text-transform: uppercase;
+    line-height: 1;
+    &-default,
+    &-alt {
+        padding: 12px;
+        border: none;
+    }
+    &:hover {
+        color: $white;
+    }
+}
+.title {
+    h2 {
+        font-size: 44px;
+        line-height: 1;
+        font-weight: 600;
+    }
+}
+.form-control::-webkit-input-placeholder {
+    color: #60717e;
+}
+.form-control:-moz-placeholder {
+    /* Firefox 18- */
+    color: #60717e;
+}
+.form-control::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #60717e;
+}
+.form-control:-ms-input-placeholder {
+    color: #60717e;
+}
+/* --- =1. Header
+----------------------------------------------------------------- */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    .logo {
+        display: block;
+        padding: 30px;
+        max-width: 230px;
+    }
+    .login-action {
+        padding: 40px;
+        a {
+            margin: 0 25px;
+            padding: 0;
+            font-size: 25px;
+            font-weight: 400;
+        }
+    }
+    &-inner {
+        background-color: $white;
+        .login-action {
+            padding: 35px 40px;
+            a {
+                color: $headerColor;
+                &.register {
+                    margin-top: -15px;
+                    padding: 5px 22px;
+                    background-color: #154067;
+                    border-radius: 0;
+                    color: $white;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}
+/* side menu - - - */
+#menu {
+    position: fixed;
+    top: 50%;
+    right: 50px;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    z-index: 999;
+    nav {
+        li {
+            margin-bottom: 15px;
+            list-style-type: none;
+            a {
+                display: block;
+                width: 11px;
+                height: 11px;
+                background-color: #7f7f7f;
+                border-radius: 50%;
+            }
+            &.active {
+                a {
+                    background-color: #ebebeb;
+                }
+            }
+        }
+    }
+}
+/* --- =2. Home Intro
+----------------------------------------------------------------- */
+.home-intro {
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    background: url(img/Bg-Header.jpg) center center;
+    background-size: cover;
+    .intro {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 40%;
+        color: $white;
+        h1 {
+            margin: 0;
+            font-weight: 400;
+            color: $white;
+        }
+        p {
+            margin-top: 40px;
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 1.3;
+            color: $white;
+            b {
+                color: $white;
+            }
+        }
+        .get-started-btn {
+            margin-top: 70px;
+            .btn {
+                display: block;
+                &:hover {
+                    background-color: $white;
+                    color: $fontColor;
+                }
+            }
+        }
+    }
+}
+/* --- =3. How We Work
+----------------------------------------------------------------- */
+.how-we-work {
+    background-color: $white;
+    h2 {
+        margin-bottom: 60px;
+    }
+}
+#svg {
+    path {
+        fill: url(#MyGradient);
+    }
+}
+.animated-section {
+    padding-bottom: 40px;
+    .visual-container {
+        padding: 120px 0;
+        .fade-text {
+            h3 {
+                font-weight: 600;
+                color: #000;
+            }
+            p {
+                margin: 0 auto;
+            }
+            &.absolute {
+                position: absolute;
+                top: 33%;
+                left: 0;
+                p {
+                    text-align: right;
+                }
+                &.right {
+                    left: auto;
+                    right: 0;
+                    p {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1030px) {
+    #svg {
+        margin-bottom: 100px;
+        -webkit-transform: scale(1.3);
+        -moz-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        -o-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+}
+/* --- =4. Refund Calculator
+----------------------------------------------------------------- */
+.refund-calculator {
+    padding: 200px 0;
+    background: url(img/bg-refund.jpg) no-repeat;
+    background-size: cover;
+    .refund-content {
+        h2 {
+            margin-top: 0;
+            font-weight: 400;
+            color: $white;
+            line-height: 1.3;
+        }
+        a {
+            margin-top: 20px;
+            padding: 14px 30px;
+            font-weight: 600;
+            span {
+                margin-right: 25px;
+                img {
+                    max-width: 33px;
+                }
+            }
+        }
+    }
+}
+/* --- =5. We Pay You
+----------------------------------------------------------------- */
+.we-pay-you {
+    .title {
+        padding-bottom: 100px;
+    }
+    .savings {
+        .save {
+            padding: 20px 0;
+            background-image: url(img/savings_image.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            h3 {
+                font-size: 40px;
+                font-weight: 400;
+                color: #000;
+            }
+            .saving-value {
+                font-size: 90px;
+                font-weight: 700;
+                color: $headerColor;
+                line-height: 75px;
+            }
+            p {
+                font-size: 28px;
+                color: #000;
+                letter-spacing: 3px;
+            }
+        }
+    }
+}
+/* --- =6. About Kasa
+----------------------------------------------------------------- */
+.about-kasa {
+    background-color: #f2f2f2;
+    .left-bg {
+        background: url(img/bg-kasa.jpg) no-repeat;
+        background-size: cover;
+        height: 900px;
+    }
+    .right-bg {
+        padding: 160px 105px 0;
+        h2 {
+            margin-bottom: 60px;
+            font-weight: 400;
+        }
+        p {
+            margin-bottom: 60px;
+        }
+        a {
+            padding: 0;
+            font-size: 21px;
+            color: $headerColor;
+        }
+    }
+}
+/* --- =7. Have a Questions
+----------------------------------------------------------------- */
+.have-a-questions {
+    h2 {
+        margin-bottom: 60px;
+        font-weight: 400;
+    }
+    .phone-number {
+        font-size: 62px;
+        font-weight: 700;
+        letter-spacing: 5px;
+    }
+    a.message-text {
+        font-size: 32px;
+        font-weight: 400;
+        color: #154067;
+        letter-spacing: 3px;
+        &:hover {
+            background-color: transparent;
+            text-decoration: underline;
+        }
+    }
+    a {
+        width: 28%;
+        border-color: $headerColor;
+        color: $headerColor;
+        &:hover {
+            background-color: $headerColor;
+        }
+    }
+    .border {
+        display: block;
+        margin: 90px auto;
+        height: 2px;
+        width: 120px;
+        background-color: #949699;
+        text-align: center;
+    }
+}
+/* --- =8. Footer
+----------------------------------------------------------------- */
+footer {
+    padding: 80px 120px;
+    background-color: #f2f2f2;
+    p {
+        font-size: 18px;
+        font-weight: 300;
+        color: #9a9a9a;
+        line-height: 1.7;
+    }
+    .border {
+        display: block;
+        margin: 50px 0;
+        height: 2px;
+        width: 100%;
+        background-color: #eaeaea;
+    }
+    .copyrights {
+        p,
+        a {
+            margin-right: 40px;
+            font-size: 19px;
+            display: inline-block;
+            color: #9a9a9a;
+        }
+        a {
+            &:hover {
+                color: $headerColor;
+                text-decoration: none;
+                &:after {
+                    color: #9a9a9a;
+                }
+            }
+            &:after {
+                content: " |";
+                margin-left: 40px;
+            }
+            &:last-child {
+                &:after {
+                    content: "";
+                }
+            }
+        }
+    }
+    .social-icons {
+        a {
+            margin-left: 30px;
+        }
+    }
+}
+/*slider handle*/
+.price-slider-main {
+    padding: 200px 0 100px;
+    background-color: transparent;
+}
+.price-box {
+    background: transparent;
+    border-radius: 10px;
+    .slider-handles {
+        .left-handle {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            display: block;
+            height: 30px;
+            width: 30px;
+            background-color: #949699;
+            border-radius: 50%;
+        }
+        .right-handle {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            display: block;
+            height: 30px;
+            width: 30px;
+            background-color: #949699;
+            border-radius: 50%;
+        }
+    }
+    .amount {
+        position: absolute;
+        top: -65px;
+        left: -50px;
+        font-size: 40px;
+        font-weight: 600;
+        color: #154067;
+        letter-spacing: 2px;
+    }
+    .start-amount,
+    .end-amount {
+        position: relative;
+        top: -50px;
+        font-size: 24px;
+        color: $headerColor;
+        letter-spacing: 1px;
+    }
+    .end-amount {
+        right: 120px;
+    }
+}
+.ui-widget-content {
+    border: 1px solid #949699;
+    background: #949699;
+    color: #222;
+    margin-top: 4px;
+}
+.ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 5.2em;
+    height: 2.2em;
+    cursor: default;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-size: 15px;
+}
+.ui-corner-all {
+    background: #e9e9e9;
+    border-radius: 10px;
+}
+.ui-state-default,
+.ui-widget-content .ui-state-default {
+    top: -28px;
+    background: transparent;
+    outline: 0;
+    background-image: url(img/slider_handle.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 60px;
+    width: 53px;
+}
+.ui-slider-horizontal .ui-slider-handle {
+    margin-left: -2em;
+}
+.ui-slider .ui-slider-handle {
+    cursor: pointer;
+}
+/* --- =9. Create Offer Page (Step 1)
+----------------------------------------------------------------- */
+/*
+Step Bar which indicates progress when the user arrives at the step, and
+indicates the end of the progress with a different shape and color.
+*/
+.bs-wizard {
+    margin-top: 60px;
+}
+.bs-wizard {
+    padding: 0 0 10px 0;
+}
+.bs-wizard > .bs-wizard-step {
+    padding: 0;
+    position: relative;
+}
+.bs-wizard > .bs-wizard-step + .bs-wizard-step {
+}
+.bs-wizard > .bs-wizard-step .bs-wizard-stepnum {
+    color: $headerColor;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.bs-wizard > .bs-wizard-step .bs-wizard-info {
+    color: #999;
+    font-size: 14px;
+}
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot,
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {
+    left: 50%;
+    position: absolute;
+    width: 30px;
+    height: 35px;
+    display: block;
+    background-image: url(img/steps_icon.svg);
+    top: 19px;
+    margin-top: -15px;
+    margin-left: -15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #f2f2f2;
+}
+.bs-wizard-step {
+    &.active,
+    &.complete {
+        .bs-wizard-dot {
+            background-image: url(img/steps_icon_completed.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-color: #f2f2f2;
+        }
+    }
+}
+.bs-wizard > .bs-wizard-step > .progress {
+    position: relative;
+    border-radius: 0px;
+    height: 3px;
+    box-shadow: none;
+    margin: 20px 0;
+}
+.bs-wizard > .bs-wizard-step > .progress > .progress-bar {
+    width: 0px;
+    box-shadow: none;
+    background: #09f;
+}
+.bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {
+    width: 0%;
+}
+.bs-wizard > .bs-wizard-step:first-child > .progress {
+}
+.bs-wizard > .bs-wizard-step:last-child > .bs-wizard-dot:last-child {
+    background-color: #f5f5f5;
+    left: 100%;
+    border-radius: 0%
+}
+.bs-wizard > .bs-wizard-step:last-child > .bs-wizard-dot:last-child:after {
+    opacity: 0;
+}
+/*Definitions only for active status*/
+.bs-wizard > .bs-wizard-step .bs-wizard-stepnum {
+    margin-top: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+/*Definitions for disabled status*/
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {
+    opacity: 0;
+}
+.bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot {
+    pointer-events: none;
+}
+/*Definitions for complete status*/
+.bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {
+    width: 100%;
+}
+.bs-wizard > .bs-wizard-step.complete:last-child > .bs-wizard-dot:last-child {
+    background-color: #005a96;
+}
+.bs-wizard > .bs-wizard-step.complete:last-child > .bs-wizard-dot:last-child:after {
+    opacity: 1;
+}
+.bs-wizard > .bs-wizard-step.complete .bs-wizard-stepnum {
+    color: #005a96;
+    opacity: 0.5;
+}
+.bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {
+    width: 0%;
+}
+.bs-wizard > .bs-wizard-step:last-child.active > .progress > .progress-bar {
+    width: 100%;
+}
+.bs-wizard > .bs-wizard-step:first-child > .progress {
+    left: 50%;
+    width: 50%;
+}
+.bs-wizard > .bs-wizard-step:last-child > .progress {
+    width: 50%;
+}
+.progress {
+    background-color: #949699;
+}
+/* page styling - - - */
+.create-offer {
+    padding: 200px 0 120px;
+    background-color: #f2f2f2;
+}
+/* inner styling - - - */
+.inner-content {
+    padding: 100px 0;
+    .input-group {
+        display: block;
+        input {
+            margin-bottom: 40px;
+        }
+    }
+    .btn-alt {
+        color: $headerColor;
+    }
+}

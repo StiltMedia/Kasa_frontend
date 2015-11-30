@@ -1,0 +1,791 @@
+/*
+Theme Name: Rustovo
+Theme URI: http://demo.powerthemes.club/
+Description: Kasa
+Author: powerthemes
+Author URI: http://themeforest.net/user/pebas/
+License: GNU General Public License version 3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Version: 1.0
+Tags: white
+*/
+/* TABLE OF CONTENTS -----------------------------
+
+0.      Colors & Mixins
+            - backgrounds
+            - main colors
+            - body bg
+            - bnNav
+            - bgCopy
+            - font color
+            - borders
+            - social icon colors
+            - font families
+            - mixins
+-0-.    Overall & common styling
+
+
+----------------------------------------------- */
+/* -------------- BEGINING OF STYLING
+---------------------------------------------------------------- */
+/* =0. Colors & Mixins
+--------------------------------------------------------------- */
+/* -------------- -0-. Overall & common styling
+--------------------------------------------------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: white;
+  font-size: 14px;
+  line-height: 1.8;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  color: #363636;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  color: #363636;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 70px;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 60px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+p {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-size: 21px;
+  color: #363636;
+  line-height: 1.5;
+}
+
+small {
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+b,
+strong {
+  color: #1c1c1c;
+}
+
+a {
+  color: #760000;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover,
+a:focus {
+  transition: all 0.3s ease-in-out;
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  padding: 120px 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+/* animation - - - - */
+/* Menu Fade In Animation */
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10%, 0);
+    transform: translate3d(0, 10%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10%, 0);
+    transform: translate3d(0, 10%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+.btn {
+  padding: 24px 12px;
+  min-height: 38px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 3px;
+  box-shadow: none;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.btn-default, .btn-alt {
+  padding: 12px;
+  border: none;
+}
+.btn:hover {
+  color: white;
+}
+
+.title h2 {
+  font-size: 44px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #60717e;
+}
+
+.form-control:-moz-placeholder {
+  /* Firefox 18- */
+  color: #60717e;
+}
+
+.form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #60717e;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #60717e;
+}
+
+/* --- =1. Header
+----------------------------------------------------------------- */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.navbar .logo {
+  display: block;
+  padding: 30px;
+  max-width: 230px;
+}
+.navbar .login-action {
+  padding: 40px;
+}
+.navbar .login-action a {
+  margin: 0 25px;
+  padding: 0;
+  font-size: 25px;
+  font-weight: 400;
+}
+.navbar-inner {
+  background-color: white;
+}
+.navbar-inner .login-action {
+  padding: 35px 40px;
+}
+.navbar-inner .login-action a {
+  color: #363636;
+}
+.navbar-inner .login-action a.register {
+  margin-top: -15px;
+  padding: 5px 22px;
+  background-color: #154067;
+  border-radius: 0;
+  color: white;
+  line-height: 30px;
+}
+
+/* side menu - - - */
+#menu {
+  position: fixed;
+  top: 50%;
+  right: 50px;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  z-index: 999;
+}
+#menu nav li {
+  margin-bottom: 15px;
+  list-style-type: none;
+}
+#menu nav li a {
+  display: block;
+  width: 11px;
+  height: 11px;
+  background-color: #7f7f7f;
+  border-radius: 50%;
+}
+#menu nav li.active a {
+  background-color: #ebebeb;
+}
+
+/* --- =2. Home Intro
+----------------------------------------------------------------- */
+.home-intro {
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  background: url(img/Bg-Header.jpg) center center;
+  background-size: cover;
+}
+.home-intro .intro {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 40%;
+  color: white;
+}
+.home-intro .intro h1 {
+  margin: 0;
+  font-weight: 400;
+  color: white;
+}
+.home-intro .intro p {
+  margin-top: 40px;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: white;
+}
+.home-intro .intro p b {
+  color: white;
+}
+.home-intro .intro .get-started-btn {
+  margin-top: 70px;
+}
+.home-intro .intro .get-started-btn .btn {
+  display: block;
+}
+.home-intro .intro .get-started-btn .btn:hover {
+  background-color: white;
+  color: #363636;
+}
+
+/* --- =3. How We Work
+----------------------------------------------------------------- */
+.how-we-work {
+  background-color: white;
+}
+.how-we-work h2 {
+  margin-bottom: 60px;
+}
+
+#svg path {
+  fill: url(#MyGradient);
+}
+
+.animated-section {
+  padding-bottom: 40px;
+}
+.animated-section .visual-container {
+  padding: 120px 0;
+}
+.animated-section .visual-container .fade-text h3 {
+  font-weight: 600;
+  color: #000;
+}
+.animated-section .visual-container .fade-text p {
+  margin: 0 auto;
+}
+.animated-section .visual-container .fade-text.absolute {
+  position: absolute;
+  top: 33%;
+  left: 0;
+}
+.animated-section .visual-container .fade-text.absolute p {
+  text-align: right;
+}
+.animated-section .visual-container .fade-text.absolute.right {
+  left: auto;
+  right: 0;
+}
+.animated-section .visual-container .fade-text.absolute.right p {
+  text-align: left;
+}
+
+@media screen and (min-width: 1030px) {
+  #svg {
+    margin-bottom: 100px;
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+}
+/* --- =4. Refund Calculator
+----------------------------------------------------------------- */
+.refund-calculator {
+  padding: 200px 0;
+  background: url(img/bg-refund.jpg) no-repeat;
+  background-size: cover;
+}
+.refund-calculator .refund-content h2 {
+  margin-top: 0;
+  font-weight: 400;
+  color: white;
+  line-height: 1.3;
+}
+.refund-calculator .refund-content a {
+  margin-top: 20px;
+  padding: 14px 30px;
+  font-weight: 600;
+}
+.refund-calculator .refund-content a span {
+  margin-right: 25px;
+}
+.refund-calculator .refund-content a span img {
+  max-width: 33px;
+}
+
+/* --- =5. We Pay You
+----------------------------------------------------------------- */
+.we-pay-you .title {
+  padding-bottom: 100px;
+}
+.we-pay-you .savings .save {
+  padding: 20px 0;
+  background-image: url(img/savings_image.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.we-pay-you .savings .save h3 {
+  font-size: 40px;
+  font-weight: 400;
+  color: #000;
+}
+.we-pay-you .savings .save .saving-value {
+  font-size: 90px;
+  font-weight: 700;
+  color: #363636;
+  line-height: 75px;
+}
+.we-pay-you .savings .save p {
+  font-size: 28px;
+  color: #000;
+  letter-spacing: 3px;
+}
+
+/* --- =6. About Kasa
+----------------------------------------------------------------- */
+.about-kasa {
+  background-color: #f2f2f2;
+}
+.about-kasa .left-bg {
+  background: url(img/bg-kasa.jpg) no-repeat;
+  background-size: cover;
+  height: 900px;
+}
+.about-kasa .right-bg {
+  padding: 160px 105px 0;
+}
+.about-kasa .right-bg h2 {
+  margin-bottom: 60px;
+  font-weight: 400;
+}
+.about-kasa .right-bg p {
+  margin-bottom: 60px;
+}
+.about-kasa .right-bg a {
+  padding: 0;
+  font-size: 21px;
+  color: #363636;
+}
+
+/* --- =7. Have a Questions
+----------------------------------------------------------------- */
+.have-a-questions h2 {
+  margin-bottom: 60px;
+  font-weight: 400;
+}
+.have-a-questions .phone-number {
+  font-size: 62px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+.have-a-questions a.message-text {
+  font-size: 32px;
+  font-weight: 400;
+  color: #154067;
+  letter-spacing: 3px;
+}
+.have-a-questions a.message-text:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+.have-a-questions a {
+  width: 28%;
+  border-color: #363636;
+  color: #363636;
+}
+.have-a-questions a:hover {
+  background-color: #363636;
+}
+.have-a-questions .border {
+  display: block;
+  margin: 90px auto;
+  height: 2px;
+  width: 120px;
+  background-color: #949699;
+  text-align: center;
+}
+
+/* --- =8. Footer
+----------------------------------------------------------------- */
+footer {
+  padding: 80px 120px;
+  background-color: #f2f2f2;
+}
+footer p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #9a9a9a;
+  line-height: 1.7;
+}
+footer .border {
+  display: block;
+  margin: 50px 0;
+  height: 2px;
+  width: 100%;
+  background-color: #eaeaea;
+}
+footer .copyrights p,
+footer .copyrights a {
+  margin-right: 40px;
+  font-size: 19px;
+  display: inline-block;
+  color: #9a9a9a;
+}
+footer .copyrights a:hover {
+  color: #363636;
+  text-decoration: none;
+}
+footer .copyrights a:hover:after {
+  color: #9a9a9a;
+}
+footer .copyrights a:after {
+  content: " |";
+  margin-left: 40px;
+}
+footer .copyrights a:last-child:after {
+  content: "";
+}
+footer .social-icons a {
+  margin-left: 30px;
+}
+
+/*slider handle*/
+.price-slider-main {
+  padding: 200px 0 100px;
+  background-color: transparent;
+}
+
+.price-box {
+  background: transparent;
+  border-radius: 10px;
+}
+.price-box .slider-handles .left-handle {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  display: block;
+  height: 30px;
+  width: 30px;
+  background-color: #949699;
+  border-radius: 50%;
+}
+.price-box .slider-handles .right-handle {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  display: block;
+  height: 30px;
+  width: 30px;
+  background-color: #949699;
+  border-radius: 50%;
+}
+.price-box .amount {
+  position: absolute;
+  top: -65px;
+  left: -50px;
+  font-size: 40px;
+  font-weight: 600;
+  color: #154067;
+  letter-spacing: 2px;
+}
+.price-box .start-amount,
+.price-box .end-amount {
+  position: relative;
+  top: -50px;
+  font-size: 24px;
+  color: #363636;
+  letter-spacing: 1px;
+}
+.price-box .end-amount {
+  right: 120px;
+}
+
+.ui-widget-content {
+  border: 1px solid #949699;
+  background: #949699;
+  color: #222;
+  margin-top: 4px;
+}
+
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 5.2em;
+  height: 2.2em;
+  cursor: default;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.ui-corner-all {
+  background: #e9e9e9;
+  border-radius: 10px;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default {
+  top: -28px;
+  background: transparent;
+  outline: 0;
+  background-image: url(img/slider_handle.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 60px;
+  width: 53px;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+  margin-left: -2em;
+}
+
+.ui-slider .ui-slider-handle {
+  cursor: pointer;
+}
+
+/* --- =9. Create Offer Page (Step 1)
+----------------------------------------------------------------- */
+/*
+Step Bar which indicates progress when the user arrives at the step, and
+indicates the end of the progress with a different shape and color.
+*/
+.bs-wizard {
+  margin-top: 60px;
+}
+
+.bs-wizard {
+  padding: 0 0 10px 0;
+}
+
+.bs-wizard > .bs-wizard-step {
+  padding: 0;
+  position: relative;
+}
+
+.bs-wizard > .bs-wizard-step .bs-wizard-stepnum {
+  color: #363636;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.bs-wizard > .bs-wizard-step .bs-wizard-info {
+  color: #999;
+  font-size: 14px;
+}
+
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot,
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {
+  left: 50%;
+  position: absolute;
+  width: 30px;
+  height: 35px;
+  display: block;
+  background-image: url(img/steps_icon.svg);
+  top: 19px;
+  margin-top: -15px;
+  margin-left: -15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #f2f2f2;
+}
+
+.bs-wizard-step.active .bs-wizard-dot, .bs-wizard-step.complete .bs-wizard-dot {
+  background-image: url(img/steps_icon_completed.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #f2f2f2;
+}
+
+.bs-wizard > .bs-wizard-step > .progress {
+  position: relative;
+  border-radius: 0px;
+  height: 3px;
+  box-shadow: none;
+  margin: 20px 0;
+}
+
+.bs-wizard > .bs-wizard-step > .progress > .progress-bar {
+  width: 0px;
+  box-shadow: none;
+  background: #09f;
+}
+
+.bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {
+  width: 0%;
+}
+
+.bs-wizard > .bs-wizard-step:last-child > .bs-wizard-dot:last-child {
+  background-color: #f5f5f5;
+  left: 100%;
+  border-radius: 0%;
+}
+
+.bs-wizard > .bs-wizard-step:last-child > .bs-wizard-dot:last-child:after {
+  opacity: 0;
+}
+
+/*Definitions only for active status*/
+.bs-wizard > .bs-wizard-step .bs-wizard-stepnum {
+  margin-top: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/*Definitions for disabled status*/
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {
+  opacity: 0;
+}
+
+.bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot {
+  pointer-events: none;
+}
+
+/*Definitions for complete status*/
+.bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {
+  width: 100%;
+}
+
+.bs-wizard > .bs-wizard-step.complete:last-child > .bs-wizard-dot:last-child {
+  background-color: #005a96;
+}
+
+.bs-wizard > .bs-wizard-step.complete:last-child > .bs-wizard-dot:last-child:after {
+  opacity: 1;
+}
+
+.bs-wizard > .bs-wizard-step.complete .bs-wizard-stepnum {
+  color: #005a96;
+  opacity: 0.5;
+}
+
+.bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {
+  width: 0%;
+}
+
+.bs-wizard > .bs-wizard-step:last-child.active > .progress > .progress-bar {
+  width: 100%;
+}
+
+.bs-wizard > .bs-wizard-step:first-child > .progress {
+  left: 50%;
+  width: 50%;
+}
+
+.bs-wizard > .bs-wizard-step:last-child > .progress {
+  width: 50%;
+}
+
+.progress {
+  background-color: #949699;
+}
+
+/* page styling - - - */
+.create-offer {
+  padding: 200px 0 120px;
+  background-color: #f2f2f2;
+}
+
+/* inner styling - - - */
+.inner-content {
+  padding: 100px 0;
+}
+.inner-content .input-group {
+  display: block;
+}
+.inner-content .input-group input {
+  margin-bottom: 40px;
+}
+.inner-content .btn-alt {
+  color: #363636;
+}

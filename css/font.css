@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Gotham';
+    src: local('Gotham-Light');
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+}
+@font-face {
+    font-family: 'Gotham';
+    src: local('Gotham-Medium');
+    font-weight: 700;
+    font-style: normal;
+    font-variant: normal;
+}
