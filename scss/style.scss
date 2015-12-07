@@ -98,11 +98,11 @@ h6 {
     font-weight: 900;
 }
 h1 {
-    font-size: 52px;
+    font-size: 38px;
     line-height: 1.1;
 }
 h2 {
-    font-size: 45px;
+    font-size: 32px;
     line-height: 1;
     font-weight: 600;
 }
@@ -120,12 +120,13 @@ h5 {
     line-height: 1.2;
 }
 h6 {
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 600;
     line-height: 1.5;
 }
 p {
     font-family: $fontSecondary;
-    font-size: 18px;
+    font-size: 15px;
     color: $fontColor;
     line-height: 1.5;
 }
@@ -151,7 +152,7 @@ img {
     height: auto;
 }
 section {
-    padding: 120px 0;
+    padding: 80px 0;
 }
 .no-padding {
     padding: 0;
@@ -205,14 +206,15 @@ section {
     }
 }
 .btn,
-.btn:focus {
-    padding: 18px 12px;
+.btn:focus,
+.btn:active {
+    padding: 12px 12px;
     min-height: 38px;
     background-color: transparent;
     border: 1px solid $white;
     border-radius: 3px;
     box-shadow: none;
-    font-size: 23px;
+    font-size: 18px;
     font-weight: 700;
     color: $white;
     text-transform: uppercase;
@@ -227,20 +229,26 @@ section {
         color: $white;
     }
 }
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    background-color: inherit;
+    border-color: inherit;
+    font-size: 14px;
+    color: inherit;
+}
 .title {
     h2 {
-        font-size: 33px;
+        font-size: 24px;
         line-height: 1;
         font-weight: 600;
     }
 }
 .input-group {
     .form-control {
-        height: 50px;
+        height: 44px;
         background-color: transparent;
         border: 2px solid #939393;
         box-shadow: none;
-        font-size: 18px;
+        font-size: 14px;
         color: #353535;
         outline: 0;
     }
@@ -277,14 +285,14 @@ header {
     .logo {
         display: block;
         padding: 30px;
-        max-width: 180px;
+        max-width: 150px;
     }
     .login-action {
         padding: 40px;
         a {
             margin: 0 25px;
             padding: 0;
-            font-size: 22px;
+            font-size: 18px;
             font-weight: 400;
             &.btn-alt {
                 border: none;
@@ -366,8 +374,8 @@ header {
             color: $white;
         }
         p {
-            margin-top: 40px;
-            font-size: 23px;
+            margin-top: 30px;
+            font-size: 18px;
             font-weight: 400;
             line-height: 1.3;
             color: $white;
@@ -376,7 +384,7 @@ header {
             }
         }
         .get-started-btn {
-            margin-top: 70px;
+            margin-top: 50px;
             .btn {
                 display: block;
                 &:hover {
@@ -390,6 +398,7 @@ header {
 /* --- =3. How We Work
 ----------------------------------------------------------------- */
 .how-we-work {
+    padding: 120px 0 0;
     background-color: $white;
     h2 {
         margin-bottom: 60px;
@@ -406,6 +415,7 @@ header {
         padding: 0 0 60px;
         .fade-text {
             h3 {
+                font-size: 18px;
                 font-weight: 600;
                 color: #000;
             }
@@ -414,14 +424,14 @@ header {
             }
             &.absolute {
                 position: absolute;
-                top: 33%;
-                left: 8%;
+                top: 34%;
+                left: 17%;
                 p {
                     text-align: right;
                 }
                 &.right {
                     left: auto;
-                    right: 4%;
+                    right: 15%;
                     p {
                         text-align: left;
                     }
@@ -432,17 +442,18 @@ header {
 }
 @media screen and (min-width: 1030px) {
     #svg {
-        -webkit-transform: scale(1.1);
-        -moz-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        -o-transform: scale(1.1);
-        transform: scale(1.1);
+        margin: -70px 0 -110px;
+        -webkit-transform: scale(0.8);
+        -moz-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        -o-transform: scale(0.8);
+        transform: scale(0.8);
     }
 }
 /* --- =4. Refund Calculator
 ----------------------------------------------------------------- */
 .refund-calculator {
-    padding: 200px 0;
+    padding: 120px 0;
     background: url(img/bg-refund.jpg) no-repeat;
     background-size: cover;
     .refund-content {
@@ -479,18 +490,18 @@ header {
             background-position: center center;
             background-size: contain;
             h3 {
-                font-size: 30px;
+                font-size: 24px;
                 font-weight: 400;
                 color: #000;
             }
             .saving-value {
-                font-size: 70px;
+                font-size: 52px;
                 font-weight: 700;
                 color: $headerColor;
-                line-height: 75px;
+                line-height: 55px;
             }
             p {
-                font-size: 21px;
+                font-size: 16px;
                 color: #000;
                 letter-spacing: 3px;
             }
@@ -504,20 +515,21 @@ header {
     .left-bg {
         background: url(img/bg-kasa.jpg) no-repeat;
         background-size: cover;
-        height: 700px;
+        height: 550px;
     }
     .right-bg {
-        padding: 160px 105px 0;
+        padding: 120px 80px 0;
         h2 {
-            margin-bottom: 60px;
+            margin-bottom: 40px;
             font-weight: 400;
         }
         p {
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
         a {
             padding: 0;
-            font-size: 21px;
+            border: none;
+            font-size: 16px;
             color: $headerColor;
         }
     }
@@ -530,12 +542,12 @@ header {
         font-weight: 400;
     }
     .phone-number {
-        font-size: 46px;
+        font-size: 34px;
         font-weight: 700;
         letter-spacing: 2px;
     }
     a.message-text {
-        font-size: 24px;
+        font-size: 18px;
         font-weight: 400;
         color: #154067;
         letter-spacing: 1px;
@@ -545,7 +557,7 @@ header {
         }
     }
     a {
-        width: 28%;
+        width: 20%;
         border-color: $headerColor;
         color: $headerColor;
         &:hover {
@@ -554,7 +566,7 @@ header {
     }
     .border {
         display: block;
-        margin: 90px auto;
+        margin: 60px auto;
         height: 2px;
         width: 120px;
         background-color: #949699;
@@ -567,7 +579,7 @@ footer {
     padding: 80px 120px;
     background-color: #f2f2f2;
     p {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 300;
         color: #9a9a9a;
         line-height: 1.6;
@@ -583,7 +595,7 @@ footer {
         p,
         a {
             margin-right: 20px;
-            font-size: 15px;
+            font-size: 12px;
             display: inline-block;
             color: #9a9a9a;
         }
@@ -608,7 +620,10 @@ footer {
     }
     .social-icons {
         a {
-            margin-left: 30px;
+            margin-left: 20px;
+            img {
+                width: 35px;
+            }
         }
     }
 }
@@ -644,9 +659,9 @@ footer {
     }
     .amount {
         position: absolute;
-        top: -65px;
-        left: -50px;
-        font-size: 40px;
+        top: -56px;
+        left: -35px;
+        font-size: 32px;
         font-weight: 600;
         color: #154067;
         letter-spacing: 2px;
@@ -654,13 +669,13 @@ footer {
     .start-amount,
     .end-amount {
         position: relative;
-        top: -50px;
-        font-size: 24px;
+        top: -30px;
+        font-size: 18px;
         color: $headerColor;
         letter-spacing: 1px;
     }
     .end-amount {
-        right: 120px;
+        right: 90px;
     }
 }
 .ui-widget-content {
@@ -686,14 +701,14 @@ footer {
 }
 .ui-state-default,
 .ui-widget-content .ui-state-default {
-    top: -28px;
+    top: -18px;
     background: transparent;
     outline: 0;
     background-image: url(img/slider_handle.png);
     background-repeat: no-repeat;
     background-size: contain;
     height: 60px;
-    width: 53px;
+    width: 40px;
 }
 .ui-slider-horizontal .ui-slider-handle {
     margin-left: -2em;
@@ -798,7 +813,7 @@ indicates the end of the progress with a different shape and color.
 }
 .bs-wizard > .bs-wizard-step .bs-wizard-stepnum {
     color: $headerColor;
-    font-size: 15px;
+    font-size: 12px;
     margin-bottom: 5px;
 }
 .bs-wizard > .bs-wizard-step .bs-wizard-info {
@@ -863,7 +878,7 @@ indicates the end of the progress with a different shape and color.
 }
 /*Definitions only for active status*/
 .bs-wizard > .bs-wizard-step .bs-wizard-stepnum {
-    margin-top: 30px;
+    margin-top: 20px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -912,11 +927,14 @@ indicates the end of the progress with a different shape and color.
 /* inner styling - - - */
 .inner-content {
     padding: 75px 0;
+    h5 {
+        font-size: 14px;
+    }
     .cash-mortgage {
         margin-bottom: 250px;
     }
     .checkbox-section {
-        margin: 40px 0 60px;
+        margin: 40px 0 30px;
     }
     .input-group {
         display: block;
@@ -925,6 +943,8 @@ indicates the end of the progress with a different shape and color.
         }
     }
     .btn-alt {
+        border: none;
+        font-size: 14px;
         color: $headerColor;
     }
     .checkbox.checkbox-huge {
@@ -968,27 +988,27 @@ indicates the end of the progress with a different shape and color.
     }
     .checkbox.checkbox-huge input[type="checkbox"]:checked + label[for="mortgage"]::after {
         content: "WITH MORTGAGE";
-        padding: 73px 28%;
+        padding: 66px 23%;
     }
     .checkbox.checkbox-huge label[for="mortgage"]::before {
         content: "WITH MORTGAGE";
-        padding: 73px 28%;
+        padding: 66px 23%;
     }
     .checkbox.checkbox-huge input[type="checkbox"]:checked + label[for="standard-terms"]::after {
         content: "USE STANDARD TERMS";
-        padding: 73px 23%;
+        padding: 66px 17%;
     }
     .checkbox.checkbox-huge label[for="standard-terms"]::before {
         content: "USE STANDARD TERMS";
-        padding: 73px 23%;
+        padding: 66px 17%;
     }
     .checkbox.checkbox-huge input[type="checkbox"]:checked + label[for="customize-terms"]::after {
         content: "CUSTOMIZE MY TERMS";
-        padding: 73px 23%;
+        padding: 66px 17%;
     }
     .checkbox.checkbox-huge label[for="customize-terms"]::before {
         content: "CUSTOMIZE MY TERMS";
-        padding: 73px 23%;
+        padding: 66px 17%;
     }
     /* normal checkbox - - - - - */
     .checkbox-inline {
@@ -1005,13 +1025,13 @@ indicates the end of the progress with a different shape and color.
         margin-left: 5px;
         padding-left: 5px;
         width: 100%;
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 600;
     }
     .checkbox label::before {
         position: absolute;
         content: "";
-        top: 1px;
+        top: -1px;
         left: -28px;
         width: 20px;
         height: 20px;
@@ -1021,10 +1041,10 @@ indicates the end of the progress with a different shape and color.
     .checkbox label:hover {
         text-decoration: underline;
     }
-    .checkbox input[type="radio"]:checked + label::after {
+    .checkbox input[type="checkbox"]:checked + label::after {
         position: absolute;
         content: "";
-        top: 4px;
+        top: 2px;
         left: -25px;
         width: 14px;
         height: 14px;
@@ -1046,7 +1066,7 @@ indicates the end of the progress with a different shape and color.
         }
         span {
             margin-left: 10px;
-            font-size: 18px;
+            font-size: 14px;
             font-weight: 700;
             &.desc {
                 display: block;
@@ -1074,7 +1094,7 @@ indicates the end of the progress with a different shape and color.
     .input-group {
         .add-option {
             margin: -35px 0 25px;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 600;
             color: #000;
         }
@@ -1103,8 +1123,9 @@ indicates the end of the progress with a different shape and color.
             margin-top: 20px;
             padding: 20px 40px;
             background-color: #154067;
-            font-size: 16px;
-            &:hover {
+            font-size: 14px;
+            &:hover,
+            &:focus {
                 background-color: darken(#154067, 5%);
             }
         }
@@ -1124,12 +1145,12 @@ indicates the end of the progress with a different shape and color.
             padding: 40px;
             background-color: $white;
             .info-content {
-                margin-bottom: 40px;
+                margin-bottom: 20px;
                 &:last-child {
                     margin-bottom: 0;
                 }
                 p {
-                    font-size: 17px;
+                    font-size: 14px;
                     color: #4f4f4f;
                     b {
                         color: $headerColor;
@@ -1140,7 +1161,7 @@ indicates the end of the progress with a different shape and color.
                 position: absolute;
                 top: 20px;
                 right: 20px;
-                font-size: 18px;
+                font-size: 14px;
                 color: #49678d;
                 border-bottom: 1px solid #49678d;
                 line-height: 1.1;
@@ -1158,10 +1179,11 @@ indicates the end of the progress with a different shape and color.
                 }
             }
             ul {
+                margin: 0;
                 li {
                     position: relative;
                     margin-right: 40px;
-                    font-size: 17px;
+                    font-size: 14px;
                     font-weight: 600;
                     span.remove-file {
                         position: absolute;
@@ -1414,20 +1436,20 @@ indicates the end of the progress with a different shape and color.
     .listing-box-content {
         padding: 0;
         h5 {
-            font-size: 18px;
+            font-size: 14px;
         }
         .listing-price {
-            font-size: 22px;
+            font-size: 18px;
             span {
-                font-size: 18px;
+                font-size: 14px;
                 line-height: 1.5;
             }
         }
         .listing-info {
             li {
                 img {
-                    max-width: 42px;
-                    height: 26px;
+                    max-width: 30px;
+                    height: 15px;
                 }
                 &:first-child {
                     padding-left: 0;
@@ -1439,11 +1461,11 @@ indicates the end of the progress with a different shape and color.
 .show-more-btn {
     margin-top: 70px;
     a {
-        padding: 14px;
-        width: 25%;
+        padding: 12px;
+        width: 20%;
         border: 2px solid #939393;
         border-radius: 0;
-        font-size: 17px;
+        font-size: 14px;
         color: #363636;
         &:hover {
             background-color: #363636;
@@ -1474,10 +1496,10 @@ indicates the end of the progress with a different shape and color.
     .input-group.small-input {
         width: 100%;
         input {
-            height: 38px;
+            height: 30px;
             border: 1px solid #363636;
             border-radius: 3px;
-            font-size: 16px;
+            font-size: 13px;
         }
         input::-webkit-input-placeholder {
             color: #363636;
@@ -1500,19 +1522,20 @@ indicates the end of the progress with a different shape and color.
         }
         .dropdown-toggle {
             padding: 0 15px;
-            height: 38px;
+            height: 30px;
             width: 80%;
             background-color: transparent;
             border: 1px solid #363636;
             border-radius: 3px;
-            font-size: 16px;
+            font-size: 13px;
+            line-height: 31px;
             text-align: left;
             span {
                 line-height: 31px;
             }
         }
         .dropdown-menu {
-            left: 26px;
+            left: 20px;
             margin-top: 0px;
             width: calc(81% - 3px);
             border-top: 0;
@@ -1520,9 +1543,17 @@ indicates the end of the progress with a different shape and color.
             box-shadow: none;
             li {
                 a {
-                    font-size: 16px;
+                    font-size: 13px;
                     color: #363636;
                 }
+            }
+        }
+    }
+    .col-md-2:nth-child(2) {
+        .small-input {
+            img {
+                margin-right: 7px;
+                width: 10px;
             }
         }
     }
@@ -1531,14 +1562,15 @@ indicates the end of the progress with a different shape and color.
             img {
                 position: absolute;
                 top: 13px;
-                left: 0;
+                left: 4px;
+                width: 22px
             }
             .dropdown-toggle {
                 left: 0;
                 margin-left: 40px;
             }
             .dropdown-menu {
-                margin-left: 14px;
+                margin-left: 20px;
             }
         }
     }
@@ -1553,13 +1585,14 @@ indicates the end of the progress with a different shape and color.
     }
     .more-filter,
     .list-view {
-        font-size: 16px;
+        font-size: 13px;
         font-weight: 600;
         color: #363636;
         line-height: 35px;
         outline: 0;
         img {
-            margin-right: 10px;
+            margin-right: 7px;
+            width: 20px;
         }
     }
 }
@@ -1568,7 +1601,7 @@ indicates the end of the progress with a different shape and color.
     margin-bottom: 10px;
     p {
         display: inline-block;
-        font-size: 16px;
+        font-size: 13px;
         font-weight: 600;
         &.pull-right {
             margin: 10px 0 0;
@@ -1580,12 +1613,13 @@ indicates the end of the progress with a different shape and color.
         margin-left: 10px;
         .dropdown-toggle {
             padding: 0 15px;
-            height: 34px;
+            height: 30px;
             min-width: 200px;
             background-color: transparent;
             border: 1px solid #363636;
             border-radius: 3px;
-            font-size: 16px;
+            font-size: 13px;
+            line-height: 28px;
             text-align: left;
             span {
                 line-height: 31px;
@@ -1600,7 +1634,7 @@ indicates the end of the progress with a different shape and color.
             box-shadow: none;
             li {
                 a {
-                    font-size: 16px;
+                    font-size: 13px;
                     color: #363636;
                 }
             }
@@ -1676,7 +1710,7 @@ indicates the end of the progress with a different shape and color.
                             display: block;
                             margin: 0 -42px;
                             padding: 3px 0;
-                                border: 1px solid transparent;
+                            border: 1px solid transparent;
                             color: #363636;
                             &:focus {
                                 border: 1px solid #b9b9b9;
@@ -1700,7 +1734,7 @@ indicates the end of the progress with a different shape and color.
                                 margin-right: 20px;
                                 font-size: 18px;
                                 font-weight: 900;
-                                color: #42A5FF;
+                                color: #42a5ff;
                             }
                         }
                         a {
@@ -1738,17 +1772,17 @@ indicates the end of the progress with a different shape and color.
 ----------------------------------------------------------------- */
 .listing-box {
     margin-top: 10px;
-    padding: 20px;
+    padding: 10px;
     background-color: #fff;
     border-radius: 3px;
     .image-box {
-        max-height: 170px;
+        max-height: 150px;
         overflow: hidden;
     }
     .listing-box-content {
         padding: 0 10px;
         h5 {
-            font-size: 16px;
+            font-size: 14px;
             line-height: 1.3;
             a {
                 color: $headerColor;
@@ -1759,12 +1793,11 @@ indicates the end of the progress with a different shape and color.
             }
         }
         .listing-price {
-            margin: 12px 0 0;
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 900;
             span {
                 margin-left: 15px;
-                font-size: 16px;
+                font-size: 12px;
                 font-weight: 400;
                 color: #555;
                 vertical-align: top;
@@ -1772,7 +1805,7 @@ indicates the end of the progress with a different shape and color.
             }
         }
         ul {
-            margin: 12px 0 0;
+            margin: 5px 0 0;
             li {
                 margin: 0 -1px 0 0;
                 padding: 6px 9px 6px 10px;
@@ -1787,25 +1820,27 @@ indicates the end of the progress with a different shape and color.
                 }
                 img {
                     margin-right: 5px;
-                    max-width: 30px;
+                    max-width: 24px;
                     vertical-align: text-bottom;
                 }
                 span {
+                    font-size: 12px;
                     color: #aaa;
                     vertical-align: bottom;
                 }
             }
         }
         .listing-box-footer {
-            margin-top: 12px;
+            margin-top: 5px;
             p {
                 display: inline-block;
-                font-size: 13px;
+                font-size: 10px;
                 color: #b7b7b7;
             }
             .links {
                 display: inline-block;
                 a {
+                    font-size: 12px;
                     color: #154067;
                     &:first-child {
                         margin-right: 15px;
@@ -1819,34 +1854,34 @@ indicates the end of the progress with a different shape and color.
     }
 }
 .listings {
-    padding: 120px 0 0;
+    padding: 80px 0 0;
     .listing-box {
         .image-box {
-            max-height: 270px;
+            max-height: 223px;
         }
         .listing-box-content {
             padding: 10px 30px;
             h5 {
-                font-size: 22px;
+                font-size: 18px;
             }
             .listing-price {
                 margin-top: 20px;
-                font-size: 32px;
+                font-size: 24px;
                 span {
-                    font-size: 26px;
+                    font-size: 20px;
                 }
             }
             ul {
                 margin-top: 20px;
                 li {
-                    padding: 12px 20px;
+                    padding: 6px 12px;
                     img {
-                        max-width: 40px;
-                        height: 20px;
+                        max-width: 30px;
+                        height: 17px;
                     }
                     span {
-                        margin-left: 10px;
-                        font-size: 16px;
+                        margin-left: 5px;
+                        font-size: 14px;
                     }
                     &:first-child {
                         padding-left: 0;
@@ -1856,11 +1891,11 @@ indicates the end of the progress with a different shape and color.
             .listing-box-footer {
                 margin-top: 20px;
                 p {
-                    font-size: 15px;
+                    font-size: 12px;
                 }
                 .links {
                     a {
-                        font-size: 15px;
+                        font-size: 12px;
                     }
                 }
             }
@@ -1880,7 +1915,7 @@ indicates the end of the progress with a different shape and color.
 .pagination > li > a,
 .pagination > li > span {
     position: relative;
-    padding: 20px 14px;
+    padding: 12px;
     color: #363636;
     text-decoration: none;
     border: 1px solid #eee;
@@ -2011,7 +2046,7 @@ indicates the end of the progress with a different shape and color.
     background-color: #fff;
     h3 {
         margin: 0 0 30px;
-        font-size: 38px;
+        font-size: 28px;
         font-weight: 600;
         letter-spacing: 1px;
     }
@@ -2023,7 +2058,7 @@ indicates the end of the progress with a different shape and color.
     background-color: #f2f2f2;
     p {
         img {
-            margin: 0 10px 0 30px;
+            margin: 0 10px 0 15px;
             width: 30px;
             vertical-align: text-bottom;
         }
@@ -2032,14 +2067,14 @@ indicates the end of the progress with a different shape and color.
         margin-top: 20px;
         background-color: #fff;
         li {
-            padding: 12px 20px;
+            padding: 8px 26px;
             img {
-                max-width: 40px;
-                height: 20px;
+                max-width: 30px;
+                height: 15px;
             }
             span {
-                margin-left: 10px;
-                font-size: 16px;
+                margin-left: 5px;
+                font-size: 14px;
             }
         }
     }
@@ -2049,7 +2084,7 @@ indicates the end of the progress with a different shape and color.
     .links {
         a {
             margin-right: 15px;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 600;
             color: #154067;
             &:hover {
@@ -2059,17 +2094,17 @@ indicates the end of the progress with a different shape and color.
         }
     }
     hr {
-        margin: 30px 0;
+        margin: 15px 0;
         border-color: #ddd;
     }
     .listing-price {
         margin: 0;
-        font-size: 32px;
+        font-size: 24px;
         font-weight: 900;
         line-height: 1;
         span {
             display: block;
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 400;
             color: #555;
             vertical-align: top;
@@ -2094,12 +2129,12 @@ indicates the end of the progress with a different shape and color.
             padding: 14px;
             width: 100%;
             background-color: #154067;
-            font-size: 18px;
+            font-size: 16px;
             &:hover {
                 background-color: darken(#154067, 7%);
             }
             &:nth-child(1) {
-                margin-top: 20px;
+                margin-top: 10px;
             }
             &:nth-child(2) {
                 background-color: #555c6e;
@@ -2109,7 +2144,7 @@ indicates the end of the progress with a different shape and color.
             }
         }
         .request-more-info {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 600;
             color: #154067;
             &:hover {
@@ -2127,8 +2162,8 @@ indicates the end of the progress with a different shape and color.
     }
 }
 .inner-title {
-    margin-bottom: 60px;
-    font-size: 32px;
+    margin-bottom: 30px;
+    font-size: 24px;
     font-weight: 600;
 }
 /* schools - - - - - */
@@ -2142,10 +2177,10 @@ indicates the end of the progress with a different shape and color.
         li {
             position: relative;
             margin-right: 60px;
-            font-size: 18px;
+            font-size: 16px;
             &:before {
                 position: absolute;
-                top: 2px;
+                top: -1px;
                 left: -10px;
                 content: ".";
                 font-size: 50px;
@@ -2166,7 +2201,12 @@ indicates the end of the progress with a different shape and color.
 ----------------------------------------------------------------- */
 @media screen and (min-width: 1400px) {
     .modal-dialog {
-        width: 1200px;
+        width: 800px;
+    }
+    #myModal {
+        .modal-dialog {
+            width: 1000px;
+        }
     }
 }
 .modal-dialog {
@@ -2182,7 +2222,7 @@ indicates the end of the progress with a different shape and color.
         .modal-header {
             border: none;
             h2 {
-                font-size: 34px;
+                font-size: 24px;
                 text-transform: uppercase;
             }
         }
@@ -2193,7 +2233,7 @@ indicates the end of the progress with a different shape and color.
             }
             h3 {
                 margin-bottom: 10px;
-                font-size: 18px;
+                font-size: 14px;
                 font-weight: 600;
                 color: lighten(#363636, 10%);
                 text-transform: uppercase;
@@ -2220,7 +2260,7 @@ indicates the end of the progress with a different shape and color.
                 margin-bottom: 10px;
                 padding-left: 5px;
                 width: 100%;
-                font-size: 16px;
+                font-size: 14px;
                 line-height: 1.1;
             }
             .checkbox label::before {
@@ -2303,7 +2343,7 @@ indicates the end of the progress with a different shape and color.
                 float: left;
                 width: 46%;
                 &:first-child {
-                    margin-right: 20px;
+                    margin-right: 14px;
                 }
             }
             .small-divide {
@@ -2312,7 +2352,7 @@ indicates the end of the progress with a different shape and color.
                 width: 9px;
                 background-color: #939393;
                 left: calc(50% - 2px);
-                top: 72px;
+                top: 67px;
                 -webkit-transform: translate(-50%);
                 -moz-transform: translate(-50%);
                 -ms-transform: translate(-50%);
@@ -2326,20 +2366,20 @@ indicates the end of the progress with a different shape and color.
                 .dropdown-menu {
                     width: 70%;
                     min-width: auto;
-                    margin-left: 39px;
+                    margin-left: 29px;
                     li {
                         a {
-                            padding: 3px 13px;
+                            padding: 3px 7px;
                         }
                     }
                 }
                 img {
-                    margin-right: 10px;
+                    margin-right: 0;
                 }
                 &.add-margin {
-                    margin-right: 21px;
+                    margin-right: 18px;
                     .dropdown-menu {
-                        margin-left: 40px;
+                        margin-left: 30px;
                     }
                 }
             }
@@ -2370,7 +2410,7 @@ indicates the end of the progress with a different shape and color.
                 padding: 12px 20px;
                 width: 100%;
                 background-color: #154067;
-                font-size: 18px;
+                font-size: 16px;
             }
             .close {
                 margin-top: 10px;
@@ -2391,7 +2431,7 @@ indicates the end of the progress with a different shape and color.
         min-height: 150px;
         border: 2px solid #939393;
         padding: 10px 20px;
-        font-size: 18px;
+        font-size: 14px;
         color: #939393;
     }
 }
@@ -2419,7 +2459,8 @@ indicates the end of the progress with a different shape and color.
         width: 30%;
     }
     input {
-        height: 54px;
+        height: 38px;
+        font-size: 14px;
     }
 }
 #log-in {
@@ -2432,7 +2473,7 @@ indicates the end of the progress with a different shape and color.
         }
         label[for="terms-of-use"] {
             margin-bottom: 20px;
-            font-size: 18px;
+            font-size: 14px;
             font-weight: 600;
             &:hover {
                 text-decoration: none;
@@ -2469,6 +2510,24 @@ indicates the end of the progress with a different shape and color.
 }
 /* --- =16. Responsiveness
 ----------------------------------------------------------------- */
+@media screen and (max-width: 1400px) {
+    .listing-box .listing-box-content ul li {
+        margin: 0 -1px 0 0;
+        padding: 6px 5px 6px 2px;
+    }
+    .listing-box .listing-box-content ul li img {
+        width: 18px;
+    }
+    .listing-box .listing-box-content .listing-box-footer .links a:first-child {
+        margin-right: 5px;
+    }
+    .listing-box .listing-box-content .listing-box-footer .links a {
+        font-size: 10px;
+    }
+    .search-properties {
+        padding: 40px 0;
+    }
+}
 @media screen and (max-width: 1030px) {
     .how-we-work {
         padding-bottom: 20px;

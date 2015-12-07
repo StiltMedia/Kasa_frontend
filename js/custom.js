@@ -600,7 +600,7 @@ jQuery(document).ready(function ($) {
             $('.mobile-search-filter').slideDown();
         });
     } else {
-        $('.more-filter').click(function () {
+        $('.more-filter.modal-filter').click(function () {
             $('#myModal').modal();
         });
     }

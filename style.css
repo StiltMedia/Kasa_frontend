@@ -60,12 +60,12 @@ h6 {
 }
 
 h1 {
-  font-size: 52px;
+  font-size: 38px;
   line-height: 1.1;
 }
 
 h2 {
-  font-size: 45px;
+  font-size: 32px;
   line-height: 1;
   font-weight: 600;
 }
@@ -87,13 +87,14 @@ h5 {
 }
 
 h6 {
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 600;
   line-height: 1.5;
 }
 
 p {
   font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 15px;
   color: #363636;
   line-height: 1.5;
 }
@@ -125,7 +126,7 @@ img {
 }
 
 section {
-  padding: 120px 0;
+  padding: 80px 0;
 }
 
 .no-padding {
@@ -171,14 +172,15 @@ section {
 }
 
 .btn,
-.btn:focus {
-  padding: 18px 12px;
+.btn:focus,
+.btn:active {
+  padding: 12px 12px;
   min-height: 38px;
   background-color: transparent;
   border: 1px solid white;
   border-radius: 3px;
   box-shadow: none;
-  font-size: 23px;
+  font-size: 18px;
   font-weight: 700;
   color: white;
   text-transform: uppercase;
@@ -187,27 +189,37 @@ section {
 }
 .btn-default, .btn-alt,
 .btn:focus-default,
-.btn:focus-alt {
+.btn:focus-alt,
+.btn:active-default,
+.btn:active-alt {
   padding: 12px;
   border: none;
 }
 .btn:hover,
-.btn:focus:hover {
+.btn:focus:hover,
+.btn:active:hover {
   color: white;
 }
 
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+  background-color: inherit;
+  border-color: inherit;
+  font-size: 14px;
+  color: inherit;
+}
+
 .title h2 {
-  font-size: 33px;
+  font-size: 24px;
   line-height: 1;
   font-weight: 600;
 }
 
 .input-group .form-control {
-  height: 50px;
+  height: 44px;
   background-color: transparent;
   border: 2px solid #939393;
   box-shadow: none;
-  font-size: 18px;
+  font-size: 14px;
   color: #353535;
   outline: 0;
 }
@@ -249,7 +261,7 @@ header {
 .navbar .logo {
   display: block;
   padding: 30px;
-  max-width: 180px;
+  max-width: 150px;
 }
 .navbar .login-action {
   padding: 40px;
@@ -257,7 +269,7 @@ header {
 .navbar .login-action a {
   margin: 0 25px;
   padding: 0;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 400;
 }
 .navbar .login-action a.btn-alt {
@@ -337,8 +349,8 @@ header {
   color: white;
 }
 .home-intro .intro p {
-  margin-top: 40px;
-  font-size: 23px;
+  margin-top: 30px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.3;
   color: white;
@@ -347,7 +359,7 @@ header {
   color: white;
 }
 .home-intro .intro .get-started-btn {
-  margin-top: 70px;
+  margin-top: 50px;
 }
 .home-intro .intro .get-started-btn .btn {
   display: block;
@@ -360,6 +372,7 @@ header {
 /* --- =3. How We Work
 ----------------------------------------------------------------- */
 .how-we-work {
+  padding: 120px 0 0;
   background-color: white;
 }
 .how-we-work h2 {
@@ -377,6 +390,7 @@ header {
   padding: 0 0 60px;
 }
 .animated-section .visual-container .fade-text h3 {
+  font-size: 18px;
   font-weight: 600;
   color: #000;
 }
@@ -385,15 +399,15 @@ header {
 }
 .animated-section .visual-container .fade-text.absolute {
   position: absolute;
-  top: 33%;
-  left: 8%;
+  top: 34%;
+  left: 17%;
 }
 .animated-section .visual-container .fade-text.absolute p {
   text-align: right;
 }
 .animated-section .visual-container .fade-text.absolute.right {
   left: auto;
-  right: 4%;
+  right: 15%;
 }
 .animated-section .visual-container .fade-text.absolute.right p {
   text-align: left;
@@ -401,17 +415,18 @@ header {
 
 @media screen and (min-width: 1030px) {
   #svg {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
+    margin: -70px 0 -110px;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
   }
 }
 /* --- =4. Refund Calculator
 ----------------------------------------------------------------- */
 .refund-calculator {
-  padding: 200px 0;
+  padding: 120px 0;
   background: url(img/bg-refund.jpg) no-repeat;
   background-size: cover;
 }
@@ -446,18 +461,18 @@ header {
   background-size: contain;
 }
 .we-pay-you .savings .save h3 {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 400;
   color: #000;
 }
 .we-pay-you .savings .save .saving-value {
-  font-size: 70px;
+  font-size: 52px;
   font-weight: 700;
   color: #363636;
-  line-height: 75px;
+  line-height: 55px;
 }
 .we-pay-you .savings .save p {
-  font-size: 21px;
+  font-size: 16px;
   color: #000;
   letter-spacing: 3px;
 }
@@ -470,21 +485,22 @@ header {
 .about-kasa .left-bg {
   background: url(img/bg-kasa.jpg) no-repeat;
   background-size: cover;
-  height: 700px;
+  height: 550px;
 }
 .about-kasa .right-bg {
-  padding: 160px 105px 0;
+  padding: 120px 80px 0;
 }
 .about-kasa .right-bg h2 {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   font-weight: 400;
 }
 .about-kasa .right-bg p {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 .about-kasa .right-bg a {
   padding: 0;
-  font-size: 21px;
+  border: none;
+  font-size: 16px;
   color: #363636;
 }
 
@@ -495,12 +511,12 @@ header {
   font-weight: 400;
 }
 .have-a-questions .phone-number {
-  font-size: 46px;
+  font-size: 34px;
   font-weight: 700;
   letter-spacing: 2px;
 }
 .have-a-questions a.message-text {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 400;
   color: #154067;
   letter-spacing: 1px;
@@ -510,7 +526,7 @@ header {
   text-decoration: underline;
 }
 .have-a-questions a {
-  width: 28%;
+  width: 20%;
   border-color: #363636;
   color: #363636;
 }
@@ -519,7 +535,7 @@ header {
 }
 .have-a-questions .border {
   display: block;
-  margin: 90px auto;
+  margin: 60px auto;
   height: 2px;
   width: 120px;
   background-color: #949699;
@@ -533,7 +549,7 @@ footer {
   background-color: #f2f2f2;
 }
 footer p {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   color: #9a9a9a;
   line-height: 1.6;
@@ -548,7 +564,7 @@ footer .border {
 footer .copyrights p,
 footer .copyrights a {
   margin-right: 20px;
-  font-size: 15px;
+  font-size: 12px;
   display: inline-block;
   color: #9a9a9a;
 }
@@ -567,7 +583,10 @@ footer .copyrights a:last-child:after {
   content: "";
 }
 footer .social-icons a {
-  margin-left: 30px;
+  margin-left: 20px;
+}
+footer .social-icons a img {
+  width: 35px;
 }
 
 /*slider handle*/
@@ -602,9 +621,9 @@ footer .social-icons a {
 }
 .price-box .amount {
   position: absolute;
-  top: -65px;
-  left: -50px;
-  font-size: 40px;
+  top: -56px;
+  left: -35px;
+  font-size: 32px;
   font-weight: 600;
   color: #154067;
   letter-spacing: 2px;
@@ -612,13 +631,13 @@ footer .social-icons a {
 .price-box .start-amount,
 .price-box .end-amount {
   position: relative;
-  top: -50px;
-  font-size: 24px;
+  top: -30px;
+  font-size: 18px;
   color: #363636;
   letter-spacing: 1px;
 }
 .price-box .end-amount {
-  right: 120px;
+  right: 90px;
 }
 
 .ui-widget-content {
@@ -647,14 +666,14 @@ footer .social-icons a {
 
 .ui-state-default,
 .ui-widget-content .ui-state-default {
-  top: -28px;
+  top: -18px;
   background: transparent;
   outline: 0;
   background-image: url(img/slider_handle.png);
   background-repeat: no-repeat;
   background-size: contain;
   height: 60px;
-  width: 53px;
+  width: 40px;
 }
 
 .ui-slider-horizontal .ui-slider-handle {
@@ -779,7 +798,7 @@ indicates the end of the progress with a different shape and color.
 
 .bs-wizard > .bs-wizard-step .bs-wizard-stepnum {
   color: #363636;
-  font-size: 15px;
+  font-size: 12px;
   margin-bottom: 5px;
 }
 
@@ -846,7 +865,7 @@ indicates the end of the progress with a different shape and color.
 
 /*Definitions only for active status*/
 .bs-wizard > .bs-wizard-step .bs-wizard-stepnum {
-  margin-top: 30px;
+  margin-top: 20px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -911,11 +930,14 @@ indicates the end of the progress with a different shape and color.
   /* normal checkbox - - - - - */
   /* review block - - - - - - */
 }
+.inner-content h5 {
+  font-size: 14px;
+}
 .inner-content .cash-mortgage {
   margin-bottom: 250px;
 }
 .inner-content .checkbox-section {
-  margin: 40px 0 60px;
+  margin: 40px 0 30px;
 }
 .inner-content .input-group {
   display: block;
@@ -924,6 +946,8 @@ indicates the end of the progress with a different shape and color.
   margin-bottom: 40px;
 }
 .inner-content .btn-alt {
+  border: none;
+  font-size: 14px;
   color: #363636;
 }
 .inner-content .checkbox.checkbox-huge label {
@@ -965,27 +989,27 @@ indicates the end of the progress with a different shape and color.
 }
 .inner-content .checkbox.checkbox-huge input[type="checkbox"]:checked + label[for="mortgage"]::after {
   content: "WITH MORTGAGE";
-  padding: 73px 28%;
+  padding: 66px 23%;
 }
 .inner-content .checkbox.checkbox-huge label[for="mortgage"]::before {
   content: "WITH MORTGAGE";
-  padding: 73px 28%;
+  padding: 66px 23%;
 }
 .inner-content .checkbox.checkbox-huge input[type="checkbox"]:checked + label[for="standard-terms"]::after {
   content: "USE STANDARD TERMS";
-  padding: 73px 23%;
+  padding: 66px 17%;
 }
 .inner-content .checkbox.checkbox-huge label[for="standard-terms"]::before {
   content: "USE STANDARD TERMS";
-  padding: 73px 23%;
+  padding: 66px 17%;
 }
 .inner-content .checkbox.checkbox-huge input[type="checkbox"]:checked + label[for="customize-terms"]::after {
   content: "CUSTOMIZE MY TERMS";
-  padding: 73px 23%;
+  padding: 66px 17%;
 }
 .inner-content .checkbox.checkbox-huge label[for="customize-terms"]::before {
   content: "CUSTOMIZE MY TERMS";
-  padding: 73px 23%;
+  padding: 66px 17%;
 }
 .inner-content .checkbox-inline {
   padding-left: 7px;
@@ -1001,13 +1025,13 @@ indicates the end of the progress with a different shape and color.
   margin-left: 5px;
   padding-left: 5px;
   width: 100%;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
 }
 .inner-content .checkbox label::before {
   position: absolute;
   content: "";
-  top: 1px;
+  top: -1px;
   left: -28px;
   width: 20px;
   height: 20px;
@@ -1017,10 +1041,10 @@ indicates the end of the progress with a different shape and color.
 .inner-content .checkbox label:hover {
   text-decoration: underline;
 }
-.inner-content .checkbox input[type="radio"]:checked + label::after {
+.inner-content .checkbox input[type="checkbox"]:checked + label::after {
   position: absolute;
   content: "";
-  top: 4px;
+  top: 2px;
   left: -25px;
   width: 14px;
   height: 14px;
@@ -1043,7 +1067,7 @@ indicates the end of the progress with a different shape and color.
 }
 .inner-content .checkbox-section span {
   margin-left: 10px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
 }
 .inner-content .checkbox-section span.desc {
@@ -1067,7 +1091,7 @@ indicates the end of the progress with a different shape and color.
 }
 .inner-content .input-group .add-option {
   margin: -35px 0 25px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   color: #000;
 }
@@ -1094,9 +1118,9 @@ indicates the end of the progress with a different shape and color.
   margin-top: 20px;
   padding: 20px 40px;
   background-color: #154067;
-  font-size: 16px;
+  font-size: 14px;
 }
-.inner-content .blue-button a:hover {
+.inner-content .blue-button a:hover, .inner-content .blue-button a:focus {
   background-color: #113352;
 }
 .inner-content .review-block {
@@ -1113,13 +1137,13 @@ indicates the end of the progress with a different shape and color.
   background-color: white;
 }
 .inner-content .review-block .white-block .info-content {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .inner-content .review-block .white-block .info-content:last-child {
   margin-bottom: 0;
 }
 .inner-content .review-block .white-block .info-content p {
-  font-size: 17px;
+  font-size: 14px;
   color: #4f4f4f;
 }
 .inner-content .review-block .white-block .info-content p b {
@@ -1129,7 +1153,7 @@ indicates the end of the progress with a different shape and color.
   position: absolute;
   top: 20px;
   right: 20px;
-  font-size: 18px;
+  font-size: 14px;
   color: #49678d;
   border-bottom: 1px solid #49678d;
   line-height: 1.1;
@@ -1146,10 +1170,13 @@ indicates the end of the progress with a different shape and color.
 .inner-content .review-block .white-block .review-inline.review-info {
   width: 50%;
 }
+.inner-content .review-block .white-block ul {
+  margin: 0;
+}
 .inner-content .review-block .white-block ul li {
   position: relative;
   margin-right: 40px;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 600;
 }
 .inner-content .review-block .white-block ul li span.remove-file {
@@ -1383,18 +1410,18 @@ indicates the end of the progress with a different shape and color.
   padding: 0;
 }
 .listing-box.listing-box-grid .listing-box-content h5 {
-  font-size: 18px;
+  font-size: 14px;
 }
 .listing-box.listing-box-grid .listing-box-content .listing-price {
-  font-size: 22px;
+  font-size: 18px;
 }
 .listing-box.listing-box-grid .listing-box-content .listing-price span {
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.5;
 }
 .listing-box.listing-box-grid .listing-box-content .listing-info li img {
-  max-width: 42px;
-  height: 26px;
+  max-width: 30px;
+  height: 15px;
 }
 .listing-box.listing-box-grid .listing-box-content .listing-info li:first-child {
   padding-left: 0;
@@ -1404,11 +1431,11 @@ indicates the end of the progress with a different shape and color.
   margin-top: 70px;
 }
 .show-more-btn a {
-  padding: 14px;
-  width: 25%;
+  padding: 12px;
+  width: 20%;
   border: 2px solid #939393;
   border-radius: 0;
-  font-size: 17px;
+  font-size: 14px;
   color: #363636;
 }
 .show-more-btn a:hover {
@@ -1440,10 +1467,10 @@ indicates the end of the progress with a different shape and color.
   width: 100%;
 }
 .search-bar .input-group.small-input input {
-  height: 38px;
+  height: 30px;
   border: 1px solid #363636;
   border-radius: 3px;
-  font-size: 16px;
+  font-size: 13px;
 }
 .search-bar .input-group.small-input input::-webkit-input-placeholder {
   color: #363636;
@@ -1464,19 +1491,20 @@ indicates the end of the progress with a different shape and color.
 }
 .search-bar .small-input .dropdown-toggle {
   padding: 0 15px;
-  height: 38px;
+  height: 30px;
   width: 80%;
   background-color: transparent;
   border: 1px solid #363636;
   border-radius: 3px;
-  font-size: 16px;
+  font-size: 13px;
+  line-height: 31px;
   text-align: left;
 }
 .search-bar .small-input .dropdown-toggle span {
   line-height: 31px;
 }
 .search-bar .small-input .dropdown-menu {
-  left: 26px;
+  left: 20px;
   margin-top: 0px;
   width: calc(81% - 3px);
   border-top: 0;
@@ -1484,27 +1512,32 @@ indicates the end of the progress with a different shape and color.
   box-shadow: none;
 }
 .search-bar .small-input .dropdown-menu li a {
-  font-size: 16px;
+  font-size: 13px;
   color: #363636;
+}
+.search-bar .col-md-2:nth-child(2) .small-input img {
+  margin-right: 7px;
+  width: 10px;
 }
 .search-bar .col-md-2:not(:first-child):not(:nth-child(2)) .small-input img {
   position: absolute;
   top: 13px;
-  left: 0;
+  left: 4px;
+  width: 22px;
 }
 .search-bar .col-md-2:not(:first-child):not(:nth-child(2)) .small-input .dropdown-toggle {
   left: 0;
   margin-left: 40px;
 }
 .search-bar .col-md-2:not(:first-child):not(:nth-child(2)) .small-input .dropdown-menu {
-  margin-left: 14px;
+  margin-left: 20px;
 }
 .search-bar .col-md-2:nth-last-of-type(2) .dropdown.small-input img {
   top: 10px;
 }
 .search-bar .more-filter,
 .search-bar .list-view {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 600;
   color: #363636;
   line-height: 35px;
@@ -1512,7 +1545,8 @@ indicates the end of the progress with a different shape and color.
 }
 .search-bar .more-filter img,
 .search-bar .list-view img {
-  margin-right: 10px;
+  margin-right: 7px;
+  width: 20px;
 }
 
 /* listing box sort by - - - - */
@@ -1521,7 +1555,7 @@ indicates the end of the progress with a different shape and color.
 }
 .sort-listings p {
   display: inline-block;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 600;
 }
 .sort-listings p.pull-right {
@@ -1534,12 +1568,13 @@ indicates the end of the progress with a different shape and color.
 }
 .sort-listings .dropdown .dropdown-toggle {
   padding: 0 15px;
-  height: 34px;
+  height: 30px;
   min-width: 200px;
   background-color: transparent;
   border: 1px solid #363636;
   border-radius: 3px;
-  font-size: 16px;
+  font-size: 13px;
+  line-height: 28px;
   text-align: left;
 }
 .sort-listings .dropdown .dropdown-toggle span {
@@ -1554,7 +1589,7 @@ indicates the end of the progress with a different shape and color.
   box-shadow: none;
 }
 .sort-listings .dropdown .dropdown-menu li a {
-  font-size: 16px;
+  font-size: 13px;
   color: #363636;
 }
 
@@ -1654,7 +1689,7 @@ indicates the end of the progress with a different shape and color.
   margin-right: 20px;
   font-size: 18px;
   font-weight: 900;
-  color: #42A5FF;
+  color: #42a5ff;
 }
 .mobile-search-filter .mobile-dropdown .dropdown-filter li .d-filter-inside li.mobile-options a {
   display: inline-block;
@@ -1682,19 +1717,19 @@ indicates the end of the progress with a different shape and color.
 ----------------------------------------------------------------- */
 .listing-box {
   margin-top: 10px;
-  padding: 20px;
+  padding: 10px;
   background-color: #fff;
   border-radius: 3px;
 }
 .listing-box .image-box {
-  max-height: 170px;
+  max-height: 150px;
   overflow: hidden;
 }
 .listing-box .listing-box-content {
   padding: 0 10px;
 }
 .listing-box .listing-box-content h5 {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.3;
 }
 .listing-box .listing-box-content h5 a {
@@ -1705,20 +1740,19 @@ indicates the end of the progress with a different shape and color.
   text-decoration: underline;
 }
 .listing-box .listing-box-content .listing-price {
-  margin: 12px 0 0;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 900;
 }
 .listing-box .listing-box-content .listing-price span {
   margin-left: 15px;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 400;
   color: #555;
   vertical-align: top;
   line-height: 1.9;
 }
 .listing-box .listing-box-content ul {
-  margin: 12px 0 0;
+  margin: 5px 0 0;
 }
 .listing-box .listing-box-content ul li {
   margin: 0 -1px 0 0;
@@ -1735,25 +1769,27 @@ indicates the end of the progress with a different shape and color.
 }
 .listing-box .listing-box-content ul li img {
   margin-right: 5px;
-  max-width: 30px;
+  max-width: 24px;
   vertical-align: text-bottom;
 }
 .listing-box .listing-box-content ul li span {
+  font-size: 12px;
   color: #aaa;
   vertical-align: bottom;
 }
 .listing-box .listing-box-content .listing-box-footer {
-  margin-top: 12px;
+  margin-top: 5px;
 }
 .listing-box .listing-box-content .listing-box-footer p {
   display: inline-block;
-  font-size: 13px;
+  font-size: 10px;
   color: #b7b7b7;
 }
 .listing-box .listing-box-content .listing-box-footer .links {
   display: inline-block;
 }
 .listing-box .listing-box-content .listing-box-footer .links a {
+  font-size: 12px;
   color: #154067;
 }
 .listing-box .listing-box-content .listing-box-footer .links a:first-child {
@@ -1764,37 +1800,37 @@ indicates the end of the progress with a different shape and color.
 }
 
 .listings {
-  padding: 120px 0 0;
+  padding: 80px 0 0;
 }
 .listings .listing-box .image-box {
-  max-height: 270px;
+  max-height: 223px;
 }
 .listings .listing-box .listing-box-content {
   padding: 10px 30px;
 }
 .listings .listing-box .listing-box-content h5 {
-  font-size: 22px;
+  font-size: 18px;
 }
 .listings .listing-box .listing-box-content .listing-price {
   margin-top: 20px;
-  font-size: 32px;
+  font-size: 24px;
 }
 .listings .listing-box .listing-box-content .listing-price span {
-  font-size: 26px;
+  font-size: 20px;
 }
 .listings .listing-box .listing-box-content ul {
   margin-top: 20px;
 }
 .listings .listing-box .listing-box-content ul li {
-  padding: 12px 20px;
+  padding: 6px 12px;
 }
 .listings .listing-box .listing-box-content ul li img {
-  max-width: 40px;
-  height: 20px;
+  max-width: 30px;
+  height: 17px;
 }
 .listings .listing-box .listing-box-content ul li span {
-  margin-left: 10px;
-  font-size: 16px;
+  margin-left: 5px;
+  font-size: 14px;
 }
 .listings .listing-box .listing-box-content ul li:first-child {
   padding-left: 0;
@@ -1803,10 +1839,10 @@ indicates the end of the progress with a different shape and color.
   margin-top: 20px;
 }
 .listings .listing-box .listing-box-content .listing-box-footer p {
-  font-size: 15px;
+  font-size: 12px;
 }
 .listings .listing-box .listing-box-content .listing-box-footer .links a {
-  font-size: 15px;
+  font-size: 12px;
 }
 .listings .pagination {
   margin: 60px 0 0;
@@ -1823,7 +1859,7 @@ indicates the end of the progress with a different shape and color.
 .pagination > li > a,
 .pagination > li > span {
   position: relative;
-  padding: 20px 14px;
+  padding: 12px;
   color: #363636;
   text-decoration: none;
   border: 1px solid #eee;
@@ -1968,7 +2004,7 @@ indicates the end of the progress with a different shape and color.
 }
 .property-content h3 {
   margin: 0 0 30px;
-  font-size: 38px;
+  font-size: 28px;
   font-weight: 600;
   letter-spacing: 1px;
 }
@@ -1980,7 +2016,7 @@ indicates the end of the progress with a different shape and color.
   background-color: #f2f2f2;
 }
 .sidebar p img {
-  margin: 0 10px 0 30px;
+  margin: 0 10px 0 15px;
   width: 30px;
   vertical-align: text-bottom;
 }
@@ -1989,22 +2025,22 @@ indicates the end of the progress with a different shape and color.
   background-color: #fff;
 }
 .sidebar ul li {
-  padding: 12px 20px;
+  padding: 8px 26px;
 }
 .sidebar ul li img {
-  max-width: 40px;
-  height: 20px;
+  max-width: 30px;
+  height: 15px;
 }
 .sidebar ul li span {
-  margin-left: 10px;
-  font-size: 16px;
+  margin-left: 5px;
+  font-size: 14px;
 }
 .sidebar .other-features {
   margin: 15px 0 0;
 }
 .sidebar .links a {
   margin-right: 15px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   color: #154067;
 }
@@ -2013,18 +2049,18 @@ indicates the end of the progress with a different shape and color.
   text-decoration: underline;
 }
 .sidebar hr {
-  margin: 30px 0;
+  margin: 15px 0;
   border-color: #ddd;
 }
 .sidebar .listing-price {
   margin: 0;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 900;
   line-height: 1;
 }
 .sidebar .listing-price span {
   display: block;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
   color: #555;
   vertical-align: top;
@@ -2045,13 +2081,13 @@ indicates the end of the progress with a different shape and color.
   padding: 14px;
   width: 100%;
   background-color: #154067;
-  font-size: 18px;
+  font-size: 16px;
 }
 .sidebar .sidebar-btn .btn:hover {
   background-color: #0f2e49;
 }
 .sidebar .sidebar-btn .btn:nth-child(1) {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .sidebar .sidebar-btn .btn:nth-child(2) {
   background-color: #555c6e;
@@ -2060,7 +2096,7 @@ indicates the end of the progress with a different shape and color.
   background-color: #454b5a;
 }
 .sidebar .sidebar-btn .request-more-info {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   color: #154067;
 }
@@ -2077,8 +2113,8 @@ indicates the end of the progress with a different shape and color.
 }
 
 .inner-title {
-  margin-bottom: 60px;
-  font-size: 32px;
+  margin-bottom: 30px;
+  font-size: 24px;
   font-weight: 600;
 }
 
@@ -2093,11 +2129,11 @@ indicates the end of the progress with a different shape and color.
 .schools ul li {
   position: relative;
   margin-right: 60px;
-  font-size: 18px;
+  font-size: 16px;
 }
 .schools ul li:before {
   position: absolute;
-  top: 2px;
+  top: -1px;
   left: -10px;
   content: ".";
   font-size: 50px;
@@ -2117,7 +2153,11 @@ indicates the end of the progress with a different shape and color.
 ----------------------------------------------------------------- */
 @media screen and (min-width: 1400px) {
   .modal-dialog {
-    width: 1200px;
+    width: 800px;
+  }
+
+  #myModal .modal-dialog {
+    width: 1000px;
   }
 }
 .modal-dialog .modal-content {
@@ -2134,7 +2174,7 @@ indicates the end of the progress with a different shape and color.
   border: none;
 }
 .modal-dialog .modal-content .modal-header h2 {
-  font-size: 34px;
+  font-size: 24px;
   text-transform: uppercase;
 }
 .modal-dialog .modal-content .modal-body {
@@ -2147,7 +2187,7 @@ indicates the end of the progress with a different shape and color.
 }
 .modal-dialog .modal-content .modal-body h3 {
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
   color: #505050;
   text-transform: uppercase;
@@ -2172,7 +2212,7 @@ indicates the end of the progress with a different shape and color.
   margin-bottom: 10px;
   padding-left: 5px;
   width: 100%;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.1;
 }
 .modal-dialog .modal-content .modal-body .checkbox label::before {
@@ -2249,7 +2289,7 @@ indicates the end of the progress with a different shape and color.
   width: 46%;
 }
 .modal-dialog .modal-content .modal-price-range .small-input:first-child {
-  margin-right: 20px;
+  margin-right: 14px;
 }
 .modal-dialog .modal-content .modal-price-range .small-divide {
   position: absolute;
@@ -2257,7 +2297,7 @@ indicates the end of the progress with a different shape and color.
   width: 9px;
   background-color: #939393;
   left: calc(50% - 2px);
-  top: 72px;
+  top: 67px;
   -webkit-transform: translate(-50%);
   -moz-transform: translate(-50%);
   -ms-transform: translate(-50%);
@@ -2270,19 +2310,19 @@ indicates the end of the progress with a different shape and color.
 .modal-dialog .modal-content .modal-price-range .dropdown.small-input .dropdown-menu {
   width: 70%;
   min-width: auto;
-  margin-left: 39px;
+  margin-left: 29px;
 }
 .modal-dialog .modal-content .modal-price-range .dropdown.small-input .dropdown-menu li a {
-  padding: 3px 13px;
+  padding: 3px 7px;
 }
 .modal-dialog .modal-content .modal-price-range .dropdown.small-input img {
-  margin-right: 10px;
+  margin-right: 0;
 }
 .modal-dialog .modal-content .modal-price-range .dropdown.small-input.add-margin {
-  margin-right: 21px;
+  margin-right: 18px;
 }
 .modal-dialog .modal-content .modal-price-range .dropdown.small-input.add-margin .dropdown-menu {
-  margin-left: 40px;
+  margin-left: 30px;
 }
 .modal-dialog .modal-content .add-more p a {
   font-weight: 600;
@@ -2303,7 +2343,7 @@ indicates the end of the progress with a different shape and color.
   padding: 12px 20px;
   width: 100%;
   background-color: #154067;
-  font-size: 18px;
+  font-size: 16px;
 }
 .modal-dialog .modal-content .search-results-btn .close {
   margin-top: 10px;
@@ -2322,7 +2362,7 @@ indicates the end of the progress with a different shape and color.
   min-height: 150px;
   border: 2px solid #939393;
   padding: 10px 20px;
-  font-size: 18px;
+  font-size: 14px;
   color: #939393;
 }
 
@@ -2352,7 +2392,8 @@ indicates the end of the progress with a different shape and color.
 }
 #log-in input,
 #more-info input {
-  height: 54px;
+  height: 38px;
+  font-size: 14px;
 }
 
 #log-in .modal-body {
@@ -2365,7 +2406,7 @@ indicates the end of the progress with a different shape and color.
 }
 #log-in .modal-body label[for="terms-of-use"] {
   margin-bottom: 20px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
 }
 #log-in .modal-body label[for="terms-of-use"]:hover {
@@ -2404,6 +2445,28 @@ indicates the end of the progress with a different shape and color.
 
 /* --- =16. Responsiveness
 ----------------------------------------------------------------- */
+@media screen and (max-width: 1400px) {
+  .listing-box .listing-box-content ul li {
+    margin: 0 -1px 0 0;
+    padding: 6px 5px 6px 2px;
+  }
+
+  .listing-box .listing-box-content ul li img {
+    width: 18px;
+  }
+
+  .listing-box .listing-box-content .listing-box-footer .links a:first-child {
+    margin-right: 5px;
+  }
+
+  .listing-box .listing-box-content .listing-box-footer .links a {
+    font-size: 10px;
+  }
+
+  .search-properties {
+    padding: 40px 0;
+  }
+}
 @media screen and (max-width: 1030px) {
   .how-we-work {
     padding-bottom: 20px;
