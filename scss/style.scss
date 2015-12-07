@@ -229,11 +229,25 @@ section {
         color: $white;
     }
 }
-.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
     background-color: inherit;
     border-color: inherit;
     font-size: 14px;
     color: inherit;
+}
+.btn-alt.active.focus,
+.btn-alt.active:focus,
+.btn-alt.focus,
+.btn-alt:active.focus,
+.btn-alt:active:focus,
+.btn-alt:focus,
+.btn-alt.active.focus {
+    font-size: 18px;
+    color: $white;
 }
 .title {
     h2 {
@@ -972,7 +986,8 @@ indicates the end of the progress with a different shape and color.
     .checkbox label:hover {
         text-decoration: underline;
     }
-    .checkbox.checkbox-huge input[type="checkbox"]:checked + label::after {
+    .checkbox.checkbox-huge input[type="checkbox"]:checked + label::after,
+    .checkbox.checkbox-huge input[type="radio"]:checked + label::after {
         position: absolute;
         content: "CASH";
         font-size: 20px;
@@ -1041,7 +1056,8 @@ indicates the end of the progress with a different shape and color.
     .checkbox label:hover {
         text-decoration: underline;
     }
-    .checkbox input[type="checkbox"]:checked + label::after {
+    .checkbox input[type="checkbox"]:checked + label::after,
+    .checkbox input[type="radio"]:checked + label::after {
         position: absolute;
         content: "";
         top: 2px;
@@ -1538,6 +1554,7 @@ indicates the end of the progress with a different shape and color.
             left: 20px;
             margin-top: 0px;
             width: calc(81% - 3px);
+            min-width: auto;
             border-top: 0;
             border-color: #363636;
             box-shadow: none;
@@ -1849,6 +1866,15 @@ indicates the end of the progress with a different shape and color.
                         color: #154067;
                     }
                 }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1400px) {
+    .listing-box {
+        .col-md-6 {
+            .image-box {
+                max-height: 200px;
             }
         }
     }
@@ -2207,6 +2233,11 @@ indicates the end of the progress with a different shape and color.
         .modal-dialog {
             width: 1000px;
         }
+    }
+}
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 1000px;
     }
 }
 .modal-dialog {

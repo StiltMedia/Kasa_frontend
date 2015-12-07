@@ -57,7 +57,7 @@
                 <div class="col-xs-9">
                     <div class="login-action text-right">
                         <a class="btn btn-alt login" href="#">Log In</a>
-                        <a class="btn btn-alt register" href="#">Sign Up</a>
+                        <a class="btn btn-alt register" data-toggle="modal" data-target="#log-in" href="#">Sign Up</a>
                     </div>
                 </div>
             </div>
@@ -157,7 +157,7 @@
 
                 <!-- btn -->
                 <div class="col-md-3 col-md-offset-7 text-right">
-                    <a href="#" class="btn btn-alt">Next Step →</a>
+                    <a href="step2.html" class="btn btn-alt">Next Step →</a>
                 </div>
                 <!-- .btn -->
 
@@ -170,6 +170,67 @@
 </section>
 <!-- .steps-->
 
+<!-- Modal Request More Info -->
+<div id="log-in" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h2 class="modal-title">Sign Up</h2>
+
+                <p>Submit this form or email <a href="#">Login</a></p>
+            </div>
+
+            <div class="modal-body clearfix">
+
+                <div class="col-md-12">
+                    <div class="sec">
+                        <div class="input-group small-input">
+                            <input type="text" class="form-control" placeholder="Email">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="sec">
+                        <div class="input-group small-input">
+                            <input type="password" class="form-control" placeholder="Password">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="sec">
+                        <div class="input-group small-input">
+                            <input type="password" class="form-control" placeholder="Confirm Password">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- checkbox selection -->
+                <div class="col-md-12 text-center">
+                    <div class="checkbox checkbox-inline">
+                        <input type="checkbox" id="terms-of-use" name="terms-of-use" value="terms of use">
+                        <label for="terms-of-use"> In agreement with our <a href="#">Terms of Use</a></label>
+                    </div>
+                </div>
+                <!-- .checkbox section -->
+
+                <div class="col-md-12">
+                    <div class="search-results-btn text-center">
+                        <a class="btn" href="#">SIGN UP</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
 <!-- .main-site -->
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -177,7 +238,6 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 <!-- Include all template js plugins -->
-<script src="js/jquery.unevent.js"></script>
 <!-- jquery ui -->
 <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
 <script src="js/jquery.scrollTo.min.js"></script>
